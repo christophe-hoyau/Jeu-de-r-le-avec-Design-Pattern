@@ -1,0 +1,15 @@
+{
+    "id": 1,
+    "nom": "Boule",
+    "type": "materiel",
+    "owner": 1,
+    "prix": 10,
+    "description": "Boule de pétanque",
+    "createdAt": "2020-01-01 00:00:00",
+    "updatedAt": "2020-01-01 00:00:00",
+    "startTime": "2020-01-01 00:00:00",
+    "endTime": "2020-03-01 00:00:00",
+    "reserve": [{"startRes": "2020-01-01 08:00:00", "endRes": "2020-02-01 10:00:00", "user": 1}],
+    "image": "boules.png",
+    "active": true
+}

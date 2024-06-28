@@ -1,0 +1,17 @@
+{   
+    "id": 1,
+    "identifiant": "JDoe",
+    "motDePasse": "1234",
+    "nom": "Doe",
+    "prenom": "John",
+    "email": "john.doe@email.com",
+    "ville": "Paris",
+    "florains": 100,
+    "createdAt": "2020-01-01",
+    "image": "JohnDoe.jpg",
+    "description": "Je représentre la société Doe",
+    "itemsOwn": [1 , 2, 3, 4],
+    "itemsSell": [{"id" : 1 , "timeSell" : "2020-01-01 00:00:00"}, {"id" : 2 , "timeSell" : "2020-01-01 00:00:00"}],
+    "itemsBuy": [{"id" : 4 , "timeBought" : "2020-01-01 00:00:00"}, {"id" : 5 , "timeSell" : "2020-01-01 00:00:00"}]
+    
+}

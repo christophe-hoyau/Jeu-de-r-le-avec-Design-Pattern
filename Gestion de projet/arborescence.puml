@@ -1,0 +1,54 @@
+@startuml Arborescence des pages
+hide empty members
+
+title Arborescence des pages
+
+caption --> mène à une page \n -- fonctionnalité implémenté sur la page
+
+class Connexion
+class Inscription
+class Acceuil
+class Profil
+class "Historique Recent" as HistoriqueRecent
+class Evaluations
+class InfoPerso
+class ModeEdition
+class "Mes Prets/Service" as MesPrets
+
+class "Creation pret/service" as creationPret
+class "Affichage des florains" as florain
+class Historique
+
+class Messagerie
+class Notifications
+class Conversation
+
+class "Moteur de recherche" as Recherche
+class "Page résultat de recherche" as Resultat
+class Filtrage
+
+user -> Connexion
+Connexion -right-> Inscription
+Inscription --> Connexion
+Connexion --> Acceuil
+
+Acceuil --> Profil
+Profil -up- HistoriqueRecent
+Profil -up- Evaluations
+Profil -up- InfoPerso
+Profil --> ModeEdition
+
+Profil -- MesPrets
+MesPrets--> creationPret
+Acceuil --> creationPret : bouton +
+
+Acceuil -- florain
+florain --> Historique
+
+Acceuil --> Messagerie
+Messagerie -- Notifications
+Messagerie --> Conversation
+
+Acceuil --> Recherche   
+Recherche --> Resultat
+Resultat -- Filtrage

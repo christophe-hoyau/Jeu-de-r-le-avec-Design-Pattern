@@ -1,0 +1,77 @@
+@startuml Modele de Données
+hide empty members
+
+class Utilisateur {
+    +id : int
+    +identifiant : String
+    +motDePasse : String
+    +nom : String
+    +prenom : String
+    +email : String
+    +ville : String
+    +florains : int
+    +createdAt : Date
+    +image : String
+    +description : String
+}
+
+class Item {
+    +id : int
+    +nom : String
+    +type : String
+    +prix : int
+    +description : String
+    +createdAt : Date
+    +updatedAt : Date
+    +startTime : Date
+    +endTime : Date
+    +Reserve : Date[]
+    +image : String
+    +active : boolean
+}
+
+class Pret extends Item
+
+class Service extends Item
+
+class Florains 
+
+class Chat{
+    id : int
+    message : String
+    time : Date
+}
+
+class Historique 
+
+class Notification {
+    id : int
+    message : String
+    time : Date
+}
+
+class Evaluation {
+    id : int
+    note : int
+    commentaire : String
+}
+
+Utilisateur "*" -- "1" Item : owns
+Utilisateur "*" -- "1" Item : sells
+Utilisateur "*" -- "*" Item : buys
+
+Utilisateur "*" -- "*" Florains : utilise
+Item "1" -- "*" Florains : coute
+
+Chat"1"--"*"Utilisateur : sender
+Chat"1"--"*"Utilisateur : receiver
+
+Historique "*" -left- "1" Utilisateur : user
+Historique "*" -- "*" Item : item used
+
+Notification "*" -- "1" Utilisateur : notifie  
+
+Evaluation "*" -- "1" Utilisateur : Evalue un utilisateur
+
+@enduml
+```

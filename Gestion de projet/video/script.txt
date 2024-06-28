@@ -1,0 +1,47 @@
+1 - On lance le projet depuis le JAR et on va montrer que le fichier MyRessources est crée avec quelques données
+
+2 - Presentation de la page de connexion et on explique que chaque utilisateur arrive sur cette page
+    et qu'il doit se connecter pour accéder à son espace personnel.
+
+3 - Direction la page d'inscription pour créer un compte.
+    On crée un compte avec des donnée réaliste en disant qu'on a pas eu le temps de gere les cas interdit (comme les mails non valide)
+    Les données des users ne sont pas chiffrées par manque de temps.
+
+4 - On se connecte avec le compte qu'on vient de créer
+
+5 - On arrive sur la page d'accueil de l'utilisateur:
+    On montre les différents bouton auquel il a acces:
+    -> La navBar qui est présente tout le long de l'utilisation du logiciel et qui permet de naviguer entre les différentes pages:
+        Accueil qui ou qu'on soit ramene a l'accueil.
+        Messagerie qui devrait permetre d'acceder a la messagerie (non implémenté).
+        La bar de recherche qui permet de rechercher une annonce par mot clé.
+        Le bouton avec le solde qui affiche le crédit de l'utilisateur (initialisé à 100) et qui permet d'acceder a l'historique des transactions (non imlémenté).
+        Le bouton de deconnexion qui permet de se deconnecter et de revenir a la page de connexion -> on se reconnecte avec John Doe pour les tests.
+        Le bouton de profil qui permet d'acceder a la page de profil de l'utilisateur.
+
+        -> La page profil:
+            On montre l'historique recent des transactions de l'utilisateur.
+            On montre les informations de l'utilisateur que l'on peut modifier.
+            On montre les évaluations recu
+            On montre qu'on peut charger une photo de profil
+            On montre qu'on peut voir les annonces posté par l'utilisateur
+
+    Le reste de l'accueil:
+        On voit les annonces les plus récentes.
+        On peut les mettres en favoris (non implémenté)
+
+        Ajouter une annonce -> on crée une annonce ou on prete une tondeuse a gazon.
+
+        On montre que l'annonce apparait dans la liste des annonces et dans myRessources.
+
+        On va maintenant la reserver et on montrer qu'elle est bien reservé dans le back et qu'on a perdu l'argent.
+
+        On en profite pour rechercher l'annonce par mot clé et on montre qu'elle apparait bien.
+
+        On se deconnecte.
+
+         
+
+
+
+

@@ -1,0 +1,25 @@
+#root{
+    -fx-border-color: black;
+    -fx-border-radius: 2% ;
+    -fx-background-color: #dedfdcfb;
+
+}
+
+#like {
+    -fx-background-color: rgba(139, 139, 139, 0.61);
+    -fx-border-radius: 5%;
+    -fx-border-color: #4d4d4d;
+}
+
+#like:hover {
+    -fx-background-color: rgba(248, 88, 88, 0.85);
+}
+
+#like.liked {
+    -fx-background-color: #ff0000c4;
+}
+
+#imgItem{
+    -fx-border-color: black;
+    -fx-border-radius: 10% ;
+}

@@ -1,0 +1,73 @@
+[
+	{
+		"id": 1,
+		"identifiant": "JDoe",
+		"password": "null",
+		"firstName": "null",
+		"lastName": "null",
+		"email": "john.doe@email.com",
+		"ville": "null",
+		"role": "user",
+		"florains": 100,
+		"createdAt": "2020-01-01 00:00:00",
+		"image": "JohnDoe.jpg",
+		"description": "Je représente la société Doe",
+		"itemsOwn": [1, 2, 3, 4] ,
+		"favorite": [1, 2, 3, 4, 5],
+		"ratings": [
+			{"id": 1, "rating": 5, "comment": "Super vendeur", "createdAt": "2020-01-01 00:00:00", "user": 2},
+			{"id": 2, "rating": 4, "comment": "Super vendeur", "createdAt": "2020-01-01 00:00:00", "user": 2},
+			{"id": 3, "rating": 3, "comment": "Super vendeur", "createdAt": "2020-01-01 00:00:00", "user": 2},
+			{"id": 4, "rating": 2, "comment": "Super vendeur", "createdAt": "2020-01-01 00:00:00", "user": 2},
+			{"id": 5, "rating": 1, "comment": "Super vendeur", "createdAt": "2020-01-01 00:00:00", "user": 2}
+		],
+		"itemsSell": [
+			{"id": 1, "transactionTime": "2021-01-01 00:00:00"},
+			{"id": 2, "transactionTime": "2020-02-01 00:00:00"}
+		],
+		"itemsBuy": [
+			{"id": 4, "transactionTime": "2022-01-01 00:00:00"},
+			{"id": 5, "transactionTime": "2022-01-09 00:00:00"}
+		]
+	},
+	{
+		"id": 2,
+		"identifiant": "admin",
+		"password": "admin",
+		"firstName": "null",
+		"lastName": "null",
+		"email": "admin@email.com",
+		"ville": "null",
+		"role": "admin",
+		"florains": 1000000,
+		"createdAt": "2020-01-01 00:00:00",
+		"image": "admin.jpg",
+		"description": "Je représente la société admin",
+		"itemsOwn": [] ,
+		"favorite": [],
+		"ratings": [
+			{"id": 1, "rating": 5, "comment": "Super vendeur", "createdAt": "2020-01-01 00:00:00", "user": 2}
+		],
+		"itemsSell": [],
+		"itemsBuy": []
+	},
+	{
+		"id": 3,
+		"identifiant": "userTest3",
+		"password": "userTest3",
+		"firstName": "user1",
+		"lastName": "user1",
+		"email": "user@user.com",
+		"ville": "Nancy",
+		"role": "user",
+		"florains": 0,
+		"createdAt": "2023-05-02 12:02:12",
+		"image": "user1.png",
+		"description": "user1",
+		"itemsOwn": [] ,
+		"favorite": [],
+		"ratings": [],
+		"itemsSell": [],
+		"itemsBuy": []
+	}
+]

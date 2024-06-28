@@ -1,0 +1,19 @@
+#root{
+    -fx-border-color: black;
+    -fx-border-radius: 2% ;
+
+}
+
+#like {
+    -fx-background-color: #dedfdcfb;
+    -border-radius: 5%;
+}
+
+#like.liked {
+    -fx-background-color: #ff0000c4;
+}
+
+#imgItem{
+    -fx-border-color: black;
+    -fx-border-radius: 2% ;
+}

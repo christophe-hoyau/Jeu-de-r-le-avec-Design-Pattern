@@ -1,0 +1,139 @@
+plugins {
+    id 'java'
+    id 'application'
+    id 'com.adarshr.test-logger' version '4.0.0'
+    id 'org.openjfx.javafxplugin' version '0.1.0'
+    id 'com.github.johnrengelman.shadow' version '7.1.2'
+
+}
+
+repositories {
+    google()
+    mavenCentral()
+    flatDir(dirs: 'lib')
+}
+
+group 'eu.telecomnancy'
+version '1.0-SNAPSHOT'
+
+ext {
+    junitVersion = '5.10.1'
+    javafxVersion = '17'
+    jdkVersion = '17'
+}
+
+java {
+    sourceCompatibility = "${jdkVersion}"
+    targetCompatibility = "${jdkVersion}"
+}
+
+application {
+    mainModule = 'eu.telecomnancy.labfx'
+    mainClass = 'eu.telecomnancy.labfx.Main'
+}
+
+
+jar {
+    manifest {
+        attributes(
+            'Main-Class': application.mainClass,
+        )
+    }
+}
+
+javafx {
+    version = "${javafxVersion}"
+    modules = ['javafx.controls', 'javafx.fxml', 'javafx.base']
+}
+
+
+sourceSets {
+    main {
+        resources {
+            srcDirs = ['src/main/resources']
+        }
+    }
+}
+
+
+dependencies {
+    implementation 'org.openjfx:javafx-base:17'
+    implementation 'org.json:json:20231013'
+    implementation 'org.openjfx:javafx-controls:17.0.1'
+    implementation 'org.openjfx:javafx-fxml:17.0.1'
+    implementation 'org.openjfx:javafx-graphics:17.0.1'
+    implementation 'org.openjfx:javafx-media:17.0.1'
+    implementation 'org.openjfx:javafx-swing:17.0.1'
+    implementation 'org.openjfx:javafx-web:17.0.1'
+    testImplementation(platform('org.junit:junit-bom:5.10.1')) {
+        exclude group: 'org.hamcrest', module: 'hamcrest-core'
+    }
+    testImplementation('org.junit.jupiter:junit-jupiter') {
+        exclude group: 'org.hamcrest', module: 'hamcrest-core'
+    }
+}
+
+
+
+
+test {
+    enabled = true
+    /*useJUnitPlatform()
+
+    testLogging {
+        events "passed", "skipped", "failed", "standardOut", "standardError"
+    }*/
+}
+
+compileJava {
+    doFirst {
+        options.compilerArgs = [
+                '--module-path', classpath.asPath,
+                '--add-modules', 'javafx.controls',
+                '--add-modules', 'javafx.fxml',
+                '--add-modules', 'javafx.base',
+                '--add-modules', 'org.json'
+        ]
+        classpath = files()
+    }
+}
+run{
+    doFirst {
+        jvmArgs = [
+                '--module-path', classpath.asPath,
+                '--add-modules', 'javafx.controls',
+                '--add-modules', 'javafx.fxml',
+                '--add-modules', 'javafx.base',
+                '--add-modules', 'org.json'
+        ]
+    }
+}
+
+testlogger {
+    theme 'mocha'
+    showExceptions true
+    showStackTraces true
+    showFullStackTraces false
+    showCauses true
+    slowThreshold 5000
+    showSummary true
+    showSimpleNames false
+    showPassed true
+    showSkipped true
+    showFailed true
+    showStandardStreams false
+    showPassedStandardStreams true
+    showSkippedStandardStreams true
+    showFailedStandardStreams true
+}
+
+shadowJar {
+    archiveBaseName.set('my-application')
+    archiveVersion.set('1.0.0')
+    archiveClassifier.set('')
+    mergeServiceFiles()
+    manifest {
+        attributes 'Main-Class': 'eu.telecomnancy.labfx.Main'
+    }
+}
+

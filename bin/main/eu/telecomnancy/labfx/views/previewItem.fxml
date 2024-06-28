@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox fx:id = "root" prefHeight="111.0" prefWidth="517.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="eu.telecomnancy.labfx.controller.PreviewItemController" stylesheets="@../styles/previewItem.css">
+   <children>
+      <VBox prefHeight="163.0" prefWidth="134.0">
+         <children>
+            <ImageView fx:id="imgItem" fitHeight="114.0" fitWidth="115.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../images/jaimeBien.png" />
+               </image>
+            </ImageView>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label fx:id="cost" alignment="CENTER" contentDisplay="CENTER" prefHeight="50.0" prefWidth="111.0" text="0">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="30.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/florain_mini.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="-20.0" />
+                     </HBox.margin>
+                  </ImageView>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <VBox alignment="TOP_CENTER" prefHeight="144.0" prefWidth="401.0">
+         <children>
+            <Label fx:id="title" text="Titre">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </Label>
+            <GridPane alignment="CENTER">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="337.0" minWidth="10.0" prefWidth="319.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="188.0" minWidth="10.0" prefWidth="73.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label fx:id="ville" alignment="CENTER" contentDisplay="CENTER" text="Ville">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets left="50.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <ToggleButton fx:id="like" mnemonicParsing="false" onAction="#addFavori" text="Favori" GridPane.columnIndex="1" />
+               </children>
+            </GridPane>
+            <Label fx:id="description" alignment="TOP_LEFT" prefHeight="48.0" prefWidth="349.0" text="Description">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+            <HBox alignment="CENTER" prefHeight="18.0" prefWidth="384.0">
+               <children>
+                  <ImageView fitHeight="23.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/profil-icon_mini.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="name" prefHeight="18.0" prefWidth="240.0" text="Nom Prenom">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </Label>
+                  <Button fx:id="buy" mnemonicParsing="false" onAction="#goPageAnnonce" text="Voir l'article" />
+               </children>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="10.0" prefWidth="384.0">
+               <children>
+                  <ImageView fitHeight="26.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/etoile_mini.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Label fx:id="note" prefHeight="34.0" prefWidth="299.0" text="Note">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                     <opaqueInsets>
+                        <Insets top="10.0" />
+                     </opaqueInsets>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</HBox>
